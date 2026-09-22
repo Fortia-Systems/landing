@@ -1,0 +1,167 @@
+{
+  "theme": "Dark Mode (Swiss & High-Contrast Tech)",
+  "typography": {
+    "strategy": "Swiss Brutalist meets Old Money Tech. Radical weight contrast, engineered and precise.",
+    "fonts": {
+      "headings": "Outfit, sans-serif (High tech, geometric, bold)",
+      "body": "Manrope, sans-serif (Clean, readable at small sizes)",
+      "mono": "JetBrains Mono, monospace (For stats, numbers, labels, datestamps)"
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase",
+      "h2": "text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-zinc-400",
+      "labels": "text-xs font-mono tracking-[0.2em] uppercase text-zinc-500"
+    }
+  },
+  "colors": {
+    "archetype": "Swiss & High-Contrast (Authority, Clarity, Truth) mixed with Cyber/Tech",
+    "background": {
+      "base": "#050505",
+      "surface": "#0F0F11",
+      "surface_elevated": "#1A1A1E"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "accent": {
+      "primary": "#FF3B30",
+      "hover": "#FF5A50",
+      "subtle": "rgba(255, 59, 48, 0.1)"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.1)",
+      "focus": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Use subtle CSS noise overlays (mix-blend-overlay with low opacity) on dark sections to kill digital flatness.",
+    "surfaces": "Grid Borders: Expose the skeleton. Container uses border-collapse style layout. Items have 1px borders. NO soft shadows. Flat solid surfaces with sharp 1px borders.",
+    "glassmorphism": "Used ONLY for sticky header: bg-black/60 backdrop-blur-xl border-b border-white/10.",
+    "shapes": "Sharp corners or very minimal radius (rounded-sm). No pill-shaped cards."
+  },
+  "layouts": {
+    "grid_strategy": "The Bento Grid Protocol (High Density/Tetris mix).",
+    "spacing": "Generous Spacing Philosophy: py-24 to py-32 for sections. Containers with borders MUST have p-6 or p-8 internal padding.",
+    "alignment": "Strict grid hierarchy. Left-align text for serious, technical feel. Use optical alignment."
+  },
+  "motion": {
+    "libraries": ["framer-motion", "lenis", "react-fast-marquee"],
+    "hero_animation": "Signature on-load masked line-by-line reveal for FORTIA SYSTEMS. Text lines wrapped in overflow-hidden spans, with y: '100%' animating to y: '0%'.",
+    "scroll": "Smooth momentum scrolling via Lenis is MANDATORY.",
+    "micro_interactions": "Cards slightly lift (-translate-y-1) with border glowing on hover. Buttons have sharp scale/bg transitions."
+  },
+  "component_blueprints": {
+    "Hero": {
+      "structure": "Kinetic typography. Large H1 split into lines. Subtitle in JetBrains Mono. One abstract 3D/high-end tech image in the background with bg-black/50 overlay. Heavy bottom padding.",
+      "testid": "hero-section"
+    },
+    "Portfolio_Grid": {
+      "structure": "8 brands. Bento-style grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-3 or 4). Each card has an image (grayscale on default, color on hover), domain label in mono, title, description, and headline metric in large bold text.",
+      "brands": [
+        {"name": "FlexPei", "domain": "flexpei.com", "metric": "150K+", "desc": "Plataforma de servicios financieros y exchange crypto"},
+        {"name": "MasMesa", "domain": "masmesa.com", "metric": "25K+", "desc": "Sistema de reservaciones para restaurantes"},
+        {"name": "FluxiPay", "domain": "fluxipay.com", "metric": "80K+", "desc": "Pasarela de pagos con criptomonedas"},
+        {"name": "Mastiket", "domain": "mastiket.com", "metric": "120K+", "desc": "Venta de boletos en línea para eventos"},
+        {"name": "CallMarket", "domain": "callmarket.cc", "metric": "1M+", "desc": "Software de contact center y encuestas"},
+        {"name": "MisTrámites", "domain": "mistramites.mx", "metric": "10K+", "desc": "Plataforma de trámites mexicanos"},
+        {"name": "ActivMedios", "domain": "activmedios.com", "metric": "En desarrollo", "desc": "Marketing de desempeño"},
+        {"name": "Masaldo", "domain": "masaldo.com.mx", "metric": "En desarrollo", "desc": "Pagos cashless RFID para eventos"}
+      ],
+      "testid": "portfolio-grid"
+    },
+    "Manifesto": {
+      "structure": "Numbered chapters. Huge numbers (01, 02) in JetBrains Mono outlining company philosophy. Staggered reveal on scroll via framer-motion.",
+      "testid": "manifesto-section"
+    },
+    "Aggregate_Stats": {
+      "structure": "Large typographic numbers summing metrics across the portfolio. Use border separators between stats.",
+      "testid": "aggregate-stats"
+    },
+    "Marquee": {
+      "structure": "Slow scrolling text (Editorial Ribbon). Large text in Outline (text-transparent border-white stroke). High-energy tech phrases.",
+      "testid": "editorial-marquee"
+    },
+    "Contact_Form": {
+      "structure": "Sharp, border-based form inputs using Shadcn. Minimalist brutalist aesthetic. Clear focus states (ring-white).",
+      "testid": "contact-form"
+    }
+  },
+  "image_urls": {
+    "Hero_Background": {
+      "url": "https://images.pexels.com/photos/37730211/pexels-photo-37730211.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "hero",
+      "description": "Abstract server room lights"
+    },
+    "FlexPei": {
+      "url": "https://images.unsplash.com/photo-1605792657660-596af9009e82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxjcnlwdG8lMjBleGNoYW5nZSUyMGFic3RyYWN0fGVufDB8fHx8MTc5MDA5NzczMnww&ixlib=rb-4.1.0&q=85",
+      "category": "portfolio",
+      "description": "Crypto laptop chart"
+    },
+    "MasMesa": {
+      "url": "https://images.pexels.com/photos/5865162/pexels-photo-5865162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "portfolio",
+      "description": "Elegant dark restaurant table"
+    },
+    "FluxiPay": {
+      "url": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHxjcnlwdG8lMjBleGNoYW5nZSUyMGFic3RyYWN0fGVufDB8fHx8MTc5MDA5NzczMnww&ixlib=rb-4.1.0&q=85",
+      "category": "portfolio",
+      "description": "Crypto coin abstract"
+    },
+    "Mastiket": {
+      "url": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjb25jZXJ0JTIwY3Jvd2QlMjBsaWdodHN8ZW58MHx8fHwxNzkwMDk3NzMyfDA&ixlib=rb-4.1.0&q=85",
+      "category": "portfolio",
+      "description": "Concert crowd lights"
+    },
+    "CallMarket": {
+      "url": "https://images.unsplash.com/photo-1561233835-f937539b95b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxkYXRhJTIwbmV0d29yayUyMGdsb3dpbmd8ZW58MHx8fHwxNzkwMDk3NzM4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "portfolio",
+      "description": "Data network glowing wall"
+    },
+    "MisTramites": {
+      "url": "https://images.pexels.com/photos/8730998/pexels-photo-8730998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "portfolio",
+      "description": "Professional signing legal documents"
+    },
+    "ActivMedios": {
+      "url": "https://images.pexels.com/photos/6203470/pexels-photo-6203470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "portfolio",
+      "description": "Neon blue line chart data"
+    },
+    "Masaldo": {
+      "url": "https://images.pexels.com/photos/30903758/pexels-photo-30903758.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "portfolio",
+      "description": "Neon lights geometric abstract"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Do NOT use HTML-based components for complex interactions. Use Shadcn for Form, Input, Textarea.",
+    "Create the Hero section with a strict framer-motion line-by-line masked text reveal for 'FORTIA SYSTEMS'.",
+    "Ensure 'lenis' is installed and wrapped around the app or main layout for smooth momentum scrolling.",
+    "Implement the Brands grid as a highly structured Bento layout, avoiding standard uniform squares.",
+    "Add data-testid attributes to all interactive/key elements (e.g., data-testid='contact-form-submit-button').",
+    "Never use pure black or gray; stick to the defined base/surface colors.",
+    "Add 'react-fast-marquee' for the editorial ticker section.",
+    "Use Phosphor icons or Lucide icons for UI elements."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) only where appropriate (like headers).",
+    "You MUST NOT apply universal transition (e.g., transition: all). Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container. Do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER: use AI assistant Emoji characters like \ud83e\udd16\ud83e\udde0\ud83d\udcad\ud83d\udca1\ud83d\udd2e\ud83c\udfaf etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "NEVER use placeholder URLs or text for images.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use 'sonner' for toast notifications."
+  ]
+}
