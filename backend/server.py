@@ -10,6 +10,8 @@ from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
+from email_service import send_email, build_contact_notification
+
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -90,6 +92,25 @@ async def create_contact(payload: ContactCreate):
     doc['created_at'] = doc['created_at'].isoformat()
     await db.contacts.insert_one(doc)
     logger.info("New contact submission from %s <%s>", contact.name, contact.email)
+
+    owner_email = os.environ.get("OWNER_EMAIL")
+    if owner_email:
+        try:
+            html = build_contact_notification(
+                name=contact.name,
+                company=contact.company,
+                email=contact.email,
+                reason=contact.reason,
+                message=contact.message,
+            )
+            await send_email(
+                to=owner_email,
+                subject=f"Nuevo contacto: {contact.reason} — {contact.name}",
+                html=html,
+            )
+        except Exception as e:
+            logger.error("Contact notification email failed: %s", str(e))
+
     return contact
 
 
